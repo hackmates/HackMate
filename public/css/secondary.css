@@ -4,7 +4,7 @@ body {
 
 #heading {
     font-family: 'Muli';
-    margin-top: 100px;
+    margin-top: 200px;
     letter-spacing: -5px;
     font-size: 11rem;
     text-align: center;
@@ -17,7 +17,7 @@ body {
 
 #line {
     height: 4px;
-    width: 60%;
+    width: 40%;
     background-color: #2c3e50;
     margin: 0 auto;
     animation: stretch 500ms ease-out 1.5s;
@@ -29,7 +29,7 @@ body {
     }
 
     100% {
-        width: 60%;
+        width: 40%;
     }
 }
 
@@ -129,11 +129,69 @@ a.nav-link:hover {
     color: #3498db;
 }
 
-/* #howItWorks {
-    height: 500px;
+#howItWorks {
+    position: relative;
+    margin-top: 100px;
+    height: 600px;
     width: 100%;
-    background-color: #f4f4f4;
-} */
+    background-color: #eeeeee;
+}
+
+#how-heading {
+    padding-top: 30px;
+    text-align: center;
+    font-family: 'Muli';
+    font-size: 3rem;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.col-md-3 {
+    background-color: darkgrey;
+    height: 300px;
+    margin-left: 60px;
+    border-radius: 10px;
+    /* border: 3px black dotted; */
+    box-shadow: 3px 2px black ;    
+}
+
+.how-head-text {
+    color: #f4f4f4;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Muli';
+}
+
+#how-img-div {
+    width: 100%;
+}
+
+.centering-div {
+    margin: 20px auto;
+    height: 100px;
+    width: 100px;
+}
+
+#how-img-div p {
+    
+}
+
+.fas {
+    padding: 0;
+}
+
+#how-img {
+    font-size: 100px;
+    color: white;
+    text-align: center;
+}
 
 @media only screen and (max-width: 400px) {
     #heading {
