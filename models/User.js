@@ -20,8 +20,11 @@ const userSchema = new mongoose.Schema({
 
   profile: {
     name: String,
+    bio: String,
+    techstack: Array,
     gender: String,
     location: String,
+    github: String,
     website: String,
     picture: String
   }
