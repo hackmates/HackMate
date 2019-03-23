@@ -1,26 +1,136 @@
 body {
-    background-color: #f4f4f4;
+    background-color: #2c3338;
 }
+
 #heading {
+    font-family: 'Muli';
     margin-top: 100px;
+    letter-spacing: -5px;
     font-size: 11rem;
     text-align: center;
+    color: #3498db;
 }
+
 #head-part {
-    color: #2980b9;
+    color: white;
 }
+
 #line {
-    height: 1px;
+    height: 4px;
     width: 60%;
-    background-color: black;
-    margin:0 auto;
+    background-color: #2c3e50;
+    margin: 0 auto;
+    animation: stretch 500ms ease-out 1.5s;
 }
+
+@keyframes stretch {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
 .lead {
     font-size: 23px;
+    font-family: 'Muli';
     margin-top: 30px;
     text-align: center;
 }
+
 #footer {
-    background-color: #e4e4e4;
-    box-shadow: 0px -2px 1px #d4d4d4;
+    background-color: #1b2227 !important;
+    box-shadow: 0px -2px 2px 1px #1a1116 !important;
+    font-family: 'Muli';
+}
+
+.navbar-brand {
+    color: #e4e4e4 !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+a.nav-link:hover {
+    border-bottom: 1px solid rgba(244, 244, 244, 1.0);
+    animation: underline 500ms linear;
+}
+
+@keyframes underline {
+    0% {
+        border-bottom: 1px solid rgba(244, 244, 244, 0);
+    }
+
+    100% {
+        border-bottom: 1px solid rgba(244, 244, 244, 1.0);
+    }
+}
+
+#signup-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-btn {
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin-top: 20px;
+    font-family: 'Muli';
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    height: 55px;
+
+    color: white;
+    background-color: #3498db;
+    box-shadow:
+        0 0 0px #000,
+        0 0 40px #2980b9,
+        0 0 800px #3498db;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 300ms;
+}
+
+#signup-btn:hover,
+#signup-btn:focus {
+    width: 230px;
+    height: 60px;
+    font-size: 25px;
+}
+
+#footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer-left {
+    margin-left: 20px;
+}
+
+#footer-right {
+    margin-right: 20px;
+}
+
+#footer a {
+    color: #3498db;
+}
+
+@media only screen and (max-width: 400px) {
+    #heading {
+        font-size: 5rem;
+    }
+    .navbar-toggler {
+        background-color: white;
+    }
 }

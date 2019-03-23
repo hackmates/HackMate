@@ -4,4 +4,10 @@ block content
   h1#heading Hack
     span#head-part Mate
   div#line
-  p.lead Find your ideal Hack Mate ❗️
+  p.lead Find your ideal HackMate ❗️
+  if !user
+    div#signup-div
+      button#signup-btn SIGN UP
+  else
+    div#signup-div
+      button#signup-btn  VIEW PROFILE

@@ -89,10 +89,10 @@ app.use(session({
   //   autoReconnect: true,
   // })
   // Maybe something is working, don't touch this part 👿
-  store: new MongoStore({
-    url: process.env.MONGODB_URI,
-    // autoReconnect: true
-  })
+  // store: new MongoStore({
+  //   url: process.env.MONGODB_URI,
+  //   // autoReconnect: true
+  // })
 }));
 app.use(passport.initialize());
 app.use(passport.session());
