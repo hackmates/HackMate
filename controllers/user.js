@@ -142,11 +142,17 @@ exports.postUpdateProfile = (req, res, next) => {
   }
 
   User.findById(req.user.id, (err, user) => {
+    
     if (err) { return next(err); }
     user.email = req.body.email || '';
     user.profile.name = req.body.name || '';
+    user.profile.bio = req.body.bio || '';
+
+    let ts = req.body.techstack.replace(/\s/g, '');
+    user.profile.techstack = ts.split(',') || [];
     user.profile.gender = req.body.gender || '';
     user.profile.location = req.body.location || '';
+    user.profile.github = req.body.github || '';
     user.profile.website = req.body.website || '';
     user.save((err) => {
       if (err) {

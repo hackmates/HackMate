@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1#heading MaybeSome
+		span#head-part Hackathons
+	
+	-
+		let list = fetch('https://mlh-events.now.sh/na-2019')
+			.then( res => {res.json;})
