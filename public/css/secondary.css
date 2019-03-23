@@ -35,6 +35,7 @@ body {
 
 .lead {
     font-size: 23px;
+    color: white;
     font-family: 'Muli';
     margin-top: 30px;
     text-align: center;
@@ -109,22 +110,30 @@ a.nav-link:hover {
 
 #footer {
     width: 100%;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 15px;
 }
 
 #footer-left {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 #footer-right {
-    margin-right: 20px;
+    margin-right: 25px;
 }
 
 #footer a {
     color: #3498db;
 }
+
+/* #howItWorks {
+    height: 500px;
+    width: 100%;
+    background-color: #f4f4f4;
+} */
 
 @media only screen and (max-width: 400px) {
     #heading {
