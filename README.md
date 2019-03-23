@@ -1,2 +1,2 @@
 # HackMate
-Find teammates for hackathons
+find teammates for hackathons
