@@ -1,9 +1,9 @@
 extends layout
 
 block content
-	h1#heading MaybeSome
-		span#head-part Hackathons
+	h1 Maybe Some Hackathons
 	
-	-
-		let list = fetch('https://mlh-events.now.sh/na-2019')
-			.then( res => {res.json;})
+	- for(let i=0; i<10; i++) {
+		img(src= hacks[i].imageUrl, alt="Just an image :)", srcset="")
+		h1#hacks #{hacks[i].name}
+	- }
