@@ -52,7 +52,7 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useNewUrlParser', true);
 
-console.log(typeof(process.env.MONGODB_URI));
+console.log(process.env.MONGODB_URI);
 mongoose.connect(process.env.MONGODB_URI)
   .then( () => {console.log("Atlas Connected")})
   .catch( (err) => {console.log(err)});
@@ -84,9 +84,14 @@ app.use(session({
   saveUninitialized: true,
   secret: process.env.SESSION_SECRET,
   cookie: { maxAge: 1209600000 }, // two weeks in milliseconds
+  // store: new MongoStore({
+  //   url: process.env.MONGODB_URI,
+  //   autoReconnect: true,
+  // })
+  // Maybe something is working, don't touch this part 👿
   store: new MongoStore({
     url: process.env.MONGODB_URI,
-    autoReconnect: true,
+    // autoReconnect: true
   })
 }));
 app.use(passport.initialize());
