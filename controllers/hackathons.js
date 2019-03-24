@@ -155,7 +155,7 @@ exports.addHack = (req, res) => {
 		console.log(updated);
 		// console.log(resp.hackathons);
 		// console.log("Old value");
-		updated.hackathons = {};
+		updated.hackathons = resp.hackathons|| {};
 		updated.hackathons[hack] = { 
 			isOpen: true,
 			team: []
