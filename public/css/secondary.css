@@ -282,6 +282,7 @@ a.nav-link:hover {
 
 #button-wrap {
     width: 90%;
+    text-align: center;
 }
 
 .hacks-btn {
@@ -292,7 +293,7 @@ a.nav-link:hover {
     font-family: 'Muli';
     border: none;
     border-radius: 5px;
-    width: 100%;
+    width: 90%;
     height: 55px;
 
     color: white;
@@ -310,7 +311,7 @@ a.nav-link:hover {
 
 .hacks-btn:hover,
 .hacks-btn:focus {
-    width: 110%;
+    width: 100%;
     height: 60px;
     font-size: 25px;
 }
@@ -322,6 +323,53 @@ a.nav-link:hover {
 
 #delete-but {
     margin-bottom: 50px;
+}
+
+#registrations {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Muli';
+}
+
+#user-desc {
+    font-size: 20px;
+}
+
+.regis-user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    border-bottom: 1px solid grey;
+    background-color: #f4f4f4;
+}
+
+.regis-item {
+    width: 300px;
+    margin: 10px 20px 10px 0;
+    line-height: 30px;
+    align-items: center;
+}
+
+.regis-item:nth-child(1) {
+    margin-left: 20px;
+}
+
+.regis-item:nth-child(4) {
+    margin-right: 20px;
+}
+
+#mail {
+    width: 200px;
+    height: 30px;
+    background-color: darkgray;
+    border: none;
 }
 
 @media only screen and (max-width: 400px) {
