@@ -280,6 +280,10 @@ a.nav-link:hover {
     align-items: center;
 }
 
+#button-wrap {
+    width: 90%;
+}
+
 .hacks-btn {
     outline: none;
     cursor: pointer;
@@ -306,7 +310,7 @@ a.nav-link:hover {
 
 .hacks-btn:hover,
 .hacks-btn:focus {
-    width: 230px;
+    width: 110%;
     height: 60px;
     font-size: 25px;
 }

@@ -27,7 +27,8 @@ const userSchema = new mongoose.Schema({
     github: String,
     website: String,
     picture: String
-  }
+  },
+  hackathons: Object
 }, { timestamps: true });
 
 /**

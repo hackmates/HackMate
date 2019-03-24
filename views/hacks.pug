@@ -6,14 +6,21 @@ block content
 	.boxflex
 		.hack-left
 			p
-				img.hacks-img(src= imageUrl, alt="maybesomeimage", srcset="")
+				img.hacks-img(src= hack.imageUrl, alt="maybesomeimage", srcset="")
 		.hack-right
-			h1.hacks-head #{name}
+			h1.hacks-head #{hack.name}
 			|
-			p.hacks-date Date: #{startDate} – #{endDate}
-			p.hacks-location Location: #{location}
+			p.hacks-date Date: #{hack.startDate} – #{hack.endDate}
+			p.hacks-location Location: #{hack.location}
 			.hacks-btn-center
-				button.hacks-btn Add Me
+				a#button-wrap(href=`/hacks/add?hack=${hack.name}&userid=${user.id}`)
+					button.hacks-btn Add Me
+	
+	ul
+		each user in users
+			li #{user.profile.name}
+			li #{user.profile.techstack}
+			li #{user.profile.github}
 	#registrations
 		//- name
 		//- techstack
@@ -21,4 +28,4 @@ block content
 		//- github
 	
 
-	
+
