@@ -17,9 +17,11 @@ exports.index = (req, res) => {
 
 exports.hacks = (req, res) => {
 	// console.log(req);
-	let userFilter = { hackathons: {} };
-	userFilter.hackathons[req.query.hack]=true;
-
+	let userFilter = {};
+	let hack = req.query.hack.replace(/\s/g, '');
+	userFilter[`hackathons.${hack}`]=true;
+	console.log(userFilter);
+	console.log("UserFilter");
 	let hackUsers;
 
 	User.find(userFilter, (err, resp) => {
@@ -27,7 +29,8 @@ exports.hacks = (req, res) => {
 			console.log(err)
 		} else {
 			console.log(resp);
-			console.log("From mongo response")
+			console.log("response")
+			//console.log("From mongo response")
 			hackUsers = resp;
 		}
 	})
@@ -55,19 +58,34 @@ exports.hacks = (req, res) => {
 }
 
 exports.addHack = (req, res) => {
-	console.log(req.query);
-	let hack = req.query.hack;
-	let updated = {
-		hackathons: {}
-	};
-	updated.hackathons[hack] = true;
-	console.log(updated)
-	User.findByIdAndUpdate(req.query.userid, updated,
-	(err, resp) => {
-		if(err) {
-			console.log(err);
-		} else {
-			res.redirect(`/hacks?hack=${hack}`);
-		}
+	//console.log(req.query);
+	let hack = req.query.hack.replace(/\s/g, '');
+	console.log(hack)
+	let updated;
+	User.findById(req.query.userid, (err, resp) => {
+		//console.log(resp);
+		// let newH = resp;
+		updated = resp;
+		// console.log(resp.hackathons);
+		// console.log("Old value");
+
+		updated.hackathons[hack] = true;
+		// console.log(updated.hackathons);
+		// console.log(updated.hackathons[hack])
+		// console.log("New Append");
+		User.findByIdAndUpdate(req.query.userid, updated,
+			(err, respo) => {
+				if(err) {
+					console.log(err);
+				} else {
+					res.redirect(`/hacks?hack=${req.query.hack}`);
+				}
+			}
+		)
 	})
+	// console.log(updated);
+	//console.log(updated)
+	// console.log(updated);
+	// console.log("Old one")
+	
 }
