@@ -27,7 +27,7 @@ exports.hacks = (req, res) => {
 			if(hack.name==req.query.hack) {
 				res.render('hacks', hack)
 			}
-		})
+		});
 		
 		// res.render('hacks', {
 		// 	hack: response.data[0].name

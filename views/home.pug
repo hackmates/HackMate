@@ -7,10 +7,12 @@ block content
   p.lead Find your teammates for a hackathon you love
   if !user
     div#signup-div
-      button#signup-btn SIGN UP
+      a(href="/signup")
+        button#signup-btn SIGN UP
   else
     div#signup-div
-      button#signup-btn  VIEW PROFILE
+      a(href="/account")
+        button#signup-btn  VIEW PROFILE
       
 block works
   #howItWorks
