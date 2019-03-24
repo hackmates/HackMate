@@ -92,3 +92,7 @@ exports.addHack = (req, res) => {
 	// console.log("Old one")
 	
 }
+
+exports.teams = (req, res) => {
+	res.render('teams');
+}
