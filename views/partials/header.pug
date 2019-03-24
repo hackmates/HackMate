@@ -13,6 +13,8 @@
             a.nav-link(href='/') Home
           li.nav-item(class=(title === 'Hackathons') ? 'active' : undefined)
             a.nav-link(href='/hackathons') Hackathons
+          li.nav-item(class=(title === 'My Teams') ? 'active' : undefined)
+            a.nav-link(href='/teams') My Teams
       ul.nav.navbar-nav.ml-auto
         if !user
           li.nav-item(class=(title === 'Login') ? 'active' : undefined)
