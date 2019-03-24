@@ -144,7 +144,7 @@ a.nav-link:hover {
     font-size: 3rem;
 }
 
-.row {
+#how-row {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,13 +152,13 @@ a.nav-link:hover {
     width: 100%;
 }
 
-.col-md-3 {
+#howToPics {
     background-color: darkgrey;
     height: 300px;
     margin-left: 60px;
     border-radius: 10px;
-    /* border: 3px black dotted; */
-    box-shadow: 3px 2px black ;    
+    border: 3px black dotted;
+    /* box-shadow: 3px 2px grey ;     */
 }
 
 .how-head-text {
@@ -179,8 +179,14 @@ a.nav-link:hover {
     width: 100px;
 }
 
-#how-img-div p {
+/* #how-img-div p {
     
+} */
+
+.how-text {
+    text-align: center; 
+    margin-top: 20px;
+    font-size: 20px;
 }
 
 .fas {
