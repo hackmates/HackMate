@@ -348,6 +348,7 @@ a.nav-link:hover {
     width: 80%;
     border-bottom: 1px solid grey;
     background-color: #f4f4f4;
+    box-shadow: 4px 4px 3px 1px #3498db;
 }
 
 .regis-item {
