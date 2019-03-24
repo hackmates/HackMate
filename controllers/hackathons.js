@@ -19,7 +19,7 @@ exports.hacks = (req, res) => {
 	// console.log(req);
 	let userFilter = {};
 	let hack = req.query.hack.replace(/\s/g, '');
-	userFilter[`hackathons.${hack}`]=true;
+	userFilter[`hackathons.${hack}.isOpen`]=true;
 	console.log(userFilter);
 	console.log("UserFilter");
 	let hackUsers;
@@ -69,7 +69,10 @@ exports.addHack = (req, res) => {
 		// console.log(resp.hackathons);
 		// console.log("Old value");
 
-		updated.hackathons[hack] = true;
+		updated.hackathons[hack] = { 
+			isOpen: true,
+			team: []
+		};
 		// console.log(updated.hackathons);
 		// console.log(updated.hackathons[hack])
 		// console.log("New Append");
@@ -88,4 +91,8 @@ exports.addHack = (req, res) => {
 	// console.log(updated);
 	// console.log("Old one")
 	
+}
+
+exports.teams = (req, res) => {
+	res.render('teams');
 }
