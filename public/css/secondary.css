@@ -281,10 +281,43 @@ a.nav-link:hover {
 }
 
 .hacks-btn {
-    height: 35px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin-top: 20px;
+    font-family: 'Muli';
+    border: none;
+    border-radius: 5px;
     width: 100%;
-    /* border-radius: 5px; */
-    margin-top: 50px;
+    height: 55px;
+
+    color: white;
+    background-color: #3498db;
+    box-shadow:
+        0 0 0px #000,
+        0 0 40px #2980b9,
+        0 0 800px #3498db;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 300ms;
+}
+
+.hacks-btn:hover,
+.hacks-btn:focus {
+    width: 230px;
+    height: 60px;
+    font-size: 25px;
+}
+
+#profile-head {
+    text-align: center;
+    margin-top: 75px;
+}
+
+#delete-but {
+    margin-bottom: 50px;
 }
 
 @media only screen and (max-width: 400px) {
