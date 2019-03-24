@@ -161,6 +161,7 @@ app.get('/hackathons', passportConfig.isAuthenticated, hackathonController.index
 app.get('/hacks', passportConfig.isAuthenticated, hackathonController.hacks);
 app.get('/hacks/add', passportConfig.isAuthenticated, hackathonController.addHack);
 app.get('/teams', passportConfig.isAuthenticated, hackathonController.teams);
+app.get('/accept', passportConfig.isAuthenticated, hackathonController.acceptTeam);
 
 /**
  * API examples routes.
