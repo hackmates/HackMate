@@ -4,6 +4,6 @@ block content
 	h1 Maybe Some Hackathons
 	
 	- for(let i=0; i<10; i++) {
-		img(src= hacks[i].imageUrl, alt="Just an image :)", srcset="")
-		h1#hacks #{hacks[i].name}
+		//-img(src= hacks[i].imageUrl, alt="Just an image :)", srcset="")
+		a(href=`/hacks?hack=${hacks[i].name}`) #{hacks[i].name}
 	- }

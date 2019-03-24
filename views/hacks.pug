@@ -1,4 +1,13 @@
 extends layout
 
 
-// General hackathon page
+//- General hackathon page
+block content
+	p
+		img(src= imageUrl, alt="maybesomeimage", srcset="")
+		h1 #{name}
+	|
+	p #{startDate} to #{endDate}
+	p Location: #{location}
+
+	
