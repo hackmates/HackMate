@@ -17,12 +17,12 @@ block content
 					button.hacks-btn Add Me
 	
 	#registrations
-		each hackUser in users
-			.regis-user#user-desc
+		.regis-user#user-desc
 				.regis-item Username
 				.regis-item Techstack
 				.regis-item GitHub
 				.regis-item Mail Me
+		each hackUser in users
 			.regis-user
 				.regis-item #{hackUser.profile.name}
 				.regis-item #{hackUser.profile.techstack}

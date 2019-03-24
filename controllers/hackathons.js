@@ -146,14 +146,16 @@ exports.addHack = (req, res) => {
 	//console.log(req.query);
 	let hack = req.query.hack.replace(/\s/g, '');
 	console.log(hack)
-	let updated;
+	let updated = {hackathons: {}};
+	console.log(req.query.userid);
 	User.findById(req.query.userid, (err, resp) => {
 		//console.log(resp);
 		// let newH = resp;
 		updated = resp;
+		console.log(updated);
 		// console.log(resp.hackathons);
 		// console.log("Old value");
-
+		updated.hackathons = {};
 		updated.hackathons[hack] = { 
 			isOpen: true,
 			team: []
