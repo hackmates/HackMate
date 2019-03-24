@@ -16,16 +16,23 @@ block content
 				a#button-wrap(href=`/hacks/add?hack=${hack.name}&userid=${user.id}`)
 					button.hacks-btn Add Me
 	
-	ul
-		each user in users
-			li #{user.profile.name}
-			li #{user.profile.techstack}
-			li #{user.profile.github}
 	#registrations
-		//- name
-		//- techstack
-		//- mailto
-		//- github
+		each hackUser in users
+			.regis-user#user-desc
+				.regis-item Username
+				.regis-item Techstack
+				.regis-item GitHub
+				.regis-item Mail Me
+			.regis-user
+				.regis-item #{hackUser.profile.name}
+				.regis-item #{hackUser.profile.techstack}
+				.regis-item #{hackUser.profile.github}
+				.regis-item
+					a(href=`mailto:${hackUser.email}?subject=Request to join my team&body=
+						Hey, this is ${hackUser.profile.name}. I found your profile on Hackmate. Would you like to team up for ${hack.name}? My skills are: ${hackUser.profile.techstack}.%0A
+						If so, go to this URL: localhost:8080/accept?hack=${hack.name}%26teamOwner=${user.id}%26teamUser=${hackUser.id}
+						`)
+						button#mail Email
 	
 
 
