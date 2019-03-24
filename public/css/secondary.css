@@ -131,7 +131,7 @@ a.nav-link:hover {
 
 #howItWorks {
     position: relative;
-    margin-top: 100px;
+    margin-top: 150px;
     height: 600px;
     width: 100%;
     background-color: #eeeeee;
@@ -184,7 +184,7 @@ a.nav-link:hover {
 } */
 
 .how-text {
-    text-align: center; 
+    text-align: center;
     margin-top: 20px;
     font-size: 20px;
 }
@@ -321,8 +321,8 @@ a.nav-link:hover {
     margin-top: 75px;
 }
 
-#delete-but {
-    margin-bottom: 50px;
+#github {
+    margin-bottom: 75px;
 }
 
 #registrations {
@@ -348,6 +348,7 @@ a.nav-link:hover {
     width: 80%;
     border-bottom: 1px solid grey;
     background-color: #f4f4f4;
+    box-shadow: 4px 4px 3px 1px #3498db;
 }
 
 .regis-item {
@@ -372,10 +373,69 @@ a.nav-link:hover {
     border: none;
 }
 
+#container-card {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-card {
+    display: flex;
+    background-color: #f4f4f4;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+#head-card {
+    font-family: 'Muli';
+    font-size: 50px;
+    text-align: center;
+    margin: 25px 0 20px 0;
+}
+
+#body-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#team-card {
+    display: flex;
+    height: 200px;
+    width: 400px;
+    background-color: gray;
+    border-radius: 10px;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+#team-card-head {
+    margin-top: 15px;
+    font-family: 'Muli';
+    font-size: 30px;
+}
+
+#team-card-members {
+    font-size: 20px;
+    font-family: 'Muli';
+    margin-top: 10px;
+}
+
+.textwhite {
+    color: white;
+    font-family: 'Muli';
+}
+
 @media only screen and (max-width: 400px) {
     #heading {
         font-size: 5rem;
     }
+
     .navbar-toggler {
         background-color: white;
     }
