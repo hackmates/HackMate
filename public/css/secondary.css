@@ -199,6 +199,94 @@ a.nav-link:hover {
     text-align: center;
 }
 
+#hackathon-head {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #f4f4f4;
+    font-family: 'Muli';
+}
+
+#hackathons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hackathon-item {
+    display: flex;
+    height: 50px;
+    margin-right: 30px;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #a4a4a4;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Muli';
+}
+
+#hackathon-link {
+    color: black;
+    text-decoration: none;
+    transition: ease-out 200ms;
+}
+
+#hackathon-link:hover,
+#hackathon-link:focus {
+    color: #3427a5;
+    font-size: 22px;
+}
+
+.boxflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.hacks-img {
+    margin-top: 100px;
+    margin-right: 50px;
+}
+
+.hacks-head {
+    font-family: 'Muli';
+    font-size: 40px;
+    color: #f4f4f4;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.hacks-date {
+    font-family: 'Muli';
+    font-size: 20px;
+    color: #f4f4f4;
+}
+
+.hacks-location {
+    font-family: 'Muli';
+    font-size: 20px;
+    color: #f4f4f4;
+    /* text-align: center; */
+}
+
+.hacks-btn-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hacks-btn {
+    height: 35px;
+    width: 100%;
+    /* border-radius: 5px; */
+    margin-top: 50px;
+}
+
 @media only screen and (max-width: 400px) {
     #heading {
         font-size: 5rem;

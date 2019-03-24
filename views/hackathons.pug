@@ -1,9 +1,10 @@
 extends layout
 
 block content
-	h1 Maybe Some Hackathons
-	
-	- for(let i=0; i<10; i++) {
-		//-img(src= hacks[i].imageUrl, alt="Just an image :)", srcset="")
-		a(href=`/hacks?hack=${hacks[i].name}`) #{hacks[i].name}
-	- }
+	h1#hackathon-head Hackathons
+	#hackathons
+		- for(let i=0; i<10; i++) {
+			//-img(src= hacks[i].imageUrl, alt="Just an image :)", srcset="")
+			.hackathon-item
+				a#hackathon-link(href=`/hacks?hack=${hacks[i].name}`) #{hacks[i].name}
+		- }

@@ -3,11 +3,22 @@ extends layout
 
 //- General hackathon page
 block content
-	p
-		img(src= imageUrl, alt="maybesomeimage", srcset="")
-		h1 #{name}
-	|
-	p #{startDate} to #{endDate}
-	p Location: #{location}
+	.boxflex
+		.hack-left
+			p
+				img.hacks-img(src= imageUrl, alt="maybesomeimage", srcset="")
+		.hack-right
+			h1.hacks-head #{name}
+			|
+			p.hacks-date Date: #{startDate} – #{endDate}
+			p.hacks-location Location: #{location}
+			.hacks-btn-center
+				button.hacks-btn Add Me
+	#registrations
+		//- name
+		//- techstack
+		//- mailto
+		//- github
+	
 
 	
